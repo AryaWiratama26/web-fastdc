@@ -50,12 +50,24 @@
 
         <section id="usage" class="section">
             <h2><i class="uil uil-play"></i> Usage</h2>
-            <pre><code>
-from fastdc import FastBot
+            <pre><code>from fastdc import FastBot
+
 bot = FastBot(token="YOUR_DISCORD_TOKEN")
+
+# Auto-reply feature
 bot.auto_reply(trigger="hi", response="Hello!")
-bot.ai_chat(api_key_usr="GROQ_API_KEY")
-bot.train_bot()
+
+# Enable AI chat with Groq API
+bot.ai_chat(api_key_usr="YOUR_GROQ_API_KEY")
+
+# Train the bot from a local file
+bot.train_bot()  # Make sure 'data_train.txt' exists
+
+# Welcome and leave notifications
+bot.welcome_member()
+bot.leave_member()
+
+# Run the bot
 bot.run()</code></pre>
         </section>
 
