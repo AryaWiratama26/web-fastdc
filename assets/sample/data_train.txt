@@ -1,0 +1,5 @@
+Q: What is FastDC?
+A: FastDC is a Python library for creating Discord bots quickly.
+
+Q: Who created FastDC?
+A: It was created by Arya Wiratama in 2025.

@@ -1,89 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastDC Documentation</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastDC Documentation</title>
+
+  <link rel="icon" type="image/png" href="/assets/img/logo-fastdc.png">
+
+  <!-- Unicons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
+
+  <!-- Google Font Poppins -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"/>
+
+  <!-- My Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
 </head>
-
 <body>
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">⚡ FastDC</h1>
-            <div class="menu-btn">
-                <i class="uil uil-bars" onclick="toggleMenu()"></i>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#installation">Installation</a></li>
-                <li><a href="#usage">Usage</a></li>
-                <li><a href="#examples">Examples</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">⚡ FastDC</h1>
+      <div class="menu-btn">
+        <i class="uil uil-bars" onclick="toggleMenu()"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#download">Download</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="overview" class="section">
-            <h2><i class="uil uil-rocket"></i> Overview</h2>
-            <p>FastDC is a Python library that helps you build Discord bots quickly with features like command handler, AI chat, training integration, and more.</p>
-        </section>
+  <main>
+    <section id="overview" class="section">
+      <h2><i class="uil uil-rocket"></i> Overview</h2>
+      <p>
+        <strong>FastDC</strong> is a lightweight and powerful Python library to build modern Discord bots with ease. It supports command handling, AI interaction, training, and more.
+      </p>
+    </section>
 
-        <section id="features" class="section">
-            <h2><i class="uil uil-cog"></i> Features</h2>
-            <ul>
-                <li><i class="uil uil-rocket"></i> Auto Command Handler</li>
-                <li><i class="uil uil-comments"></i> AI Chat Support</li>
-                <li><i class="uil uil-brain"></i> Trainable ChatBot via <code>data_train.txt</code></li>
-                <li><i class="uil uil-bolt"></i> Simple & Fast Setup</li>
-            </ul>
-        </section>
+    <section id="features" class="section">
+      <h2><i class="uil uil-cog"></i> Features</h2>
+      <ul>
+        <li><i class="uil uil-rocket"></i> Auto Command Handler</li>
+        <li><i class="uil uil-comments"></i> AI Chat Support (Groq API)</li>
+        <li><i class="uil uil-brain"></i> Trainable ChatBot with <code>data_train.txt</code></li>
+        <li><i class="uil uil-smile"></i> Member Join & Leave Notifications</li>
+      </ul>
+    </section>
 
-        <section id="installation" class="section">
-            <h2><i class="uil uil-download-alt"></i> Installation</h2>
-            <pre><code>pip install fastdc</code></pre>
-        </section>
+    <section id="installation" class="section">
+      <h2><i class="uil uil-download-alt"></i> Installation</h2>
+      <pre><code>pip install fastdc</code></pre>
+    </section>
 
-        <section id="usage" class="section">
-            <h2><i class="uil uil-play"></i> Usage</h2>
-            <pre><code>from fastdc import FastBot
+    <section id="usage" class="section">
+      <h2><i class="uil uil-play"></i> Usage</h2>
+      <pre><code>from fastdc import FastBot
 
 bot = FastBot(token="YOUR_DISCORD_TOKEN")
 
-# Auto-reply feature
 bot.auto_reply(trigger="hi", response="Hello!")
-
-# Enable AI chat with Groq API
 bot.ai_chat(api_key_usr="YOUR_GROQ_API_KEY")
-
-# Train the bot from a local file
 bot.train_bot()  # Make sure 'data_train.txt' exists
-
-# Welcome and leave notifications
-bot.welcome_member()
-bot.leave_member()
-
-# Run the bot
+bot.welcome_member() # Sends "Hello {User}, Welcome to Server!"
+bot.leave_member() # Sends "{User} has left the server 🖐️"
 bot.run()</code></pre>
-        </section>
+    </section>
 
-        <section id="examples" class="section">
-            <h2><i class="uil uil-file-alt"></i> Examples</h2>
-            <p>To train your bot with <code>data_train.txt</code>, use the command:</p>
-            <pre><code>!askbot [your question]</code></pre>
-            <p>AI, use the command:</p>
-            <pre><code>!ai {your_prompt}</code></pre>
-        </section>
-    </main>
+    <section id="examples" class="section">
+      <h2><i class="uil uil-file-alt"></i> Examples</h2>
+      <p><strong>Train your bot:</strong></p>
+      <pre><code>!askbot What is FastDC?</code></pre>
 
-    <footer>
-        <p>Made with ❤️ by Arya Wiratama • 2025</p>
-    </footer>
+      <p><strong>Ask AI:</strong></p>
+      <pre><code>!ai What is Programming?</code></pre>
 
-    <script src="/assets/js/main.js"></script>
+    </section>
+
+    <section id="download" class="section">
+      <h2><i class="uil uil-download-alt"></i> Download</h2>
+      <p>Need an example training file? Download it here:</p>
+      <a href="/assets/sample/data_train.txt" download class="download-btn">⬇️ Download Example <code>data_train.txt</code></a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Arya Wiratama • 2025</p>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
